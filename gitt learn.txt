@@ -1,0 +1,88 @@
+-readme file extention[.md]special writing [heading]
+-git status : order to know whats in ur GitHub directory 
+-git branch [display branch name: working directory]
+-git remote -v [origin : remote repo]
+
+1- clone repo :
+
+-after making an reprisatorty u can clone it by dropdown in left  [clone or download and copy http LINK]:
+1- open terminal :cd C:\angularlearn\productcard [path of file i wanna clone reprisotry in ].
+2-  git clone https://github.com/gehad2789/product.cart-angular.git [linl of repo from git]
+3-to check if clined    : dir -----> 
+-------------------------------------------------------------------------------
+working directory-----git add--->staging area----git commit-->local repo---git push-->
+remote repo
+grom remote repo --git fetch->local repo ---git checkout/get merge--->working drectory.
+
+so to add file to repo :
+1- git add --->git status [to see changes] , or can writ :git add * [to add all files]
+**- to un stage[opposite to add] :git reset head add.text[file name], or can write git 
+reset head * [to unstage all files]
+3- git commit -m "added all files " [mssgs i wanna write to explain what i did]
+4- git push origin  main [branch name by :git branch].
+***4- git pull origin      : it pulls changes from git repo to ur working directory 
+----------------------------------------------------------------
+to add members to repo go to repo --> setting--->collaberotors --> email of who u wanna add [https://www.youtube.com/watch?v=VP3c8ExvOP0&list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF&index=6]
+
+--------------------------------------------------------vid 7----------------------------------------------------------------
+
+Git Configuration:
+1- by terminal
+-to show configuration list : git config --list 
+-to show bigger list : git help config
+-git config --l--show-origin [to show list of config and there origins
+
+
+**it can be --global or not 
+- git config --global user.name "gehad" [set this config]
+-git config --global user.name [get this config [return gehad]
+-git config --global --unset user.name [unset =delete]
+
+2- by editor :
+git config --global --edit    : all project config shows =
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+[remote "origin"]
+        url = https://github.com/gehad2789/our-project.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+        remote = origin
+        merge = refs/heads/main
+[user]
+        name = gehad Mahmoud
+
+-----------------vid 8-------------------------------------------
+ Github Public Key [allow level of security[define who can accsses my project ]
+1- ssh-keygen -t rsa -b 4096 -C "gehad2784377@gmail.com"     [ssh=secure sheel  keygen=key generator]   to generate the key
+2- ask to add file for key  [must add it]
+3- ask for pass [can add it or not] 
+4- show content of ur key
+4- open GitHub , setting , ssh and gpg keys , click at new ssh key 
+6- add title[whaat i want] and key [what showed in terminal[ssh content]
+***to check ssh keys : git -T git@github.com
+*ask for bassword add it 
+*******must make an ssh key to link with git hub 
+
+
+in cd :
+git status         = status of project in git-hub  eg: says :nothing added to commit but untracked files present (use "git add" to track)
+ git add *        = add all files in my workspace to be tracked
+git add main.css index.html        add files one by one 
+
+git reset head main.txt     untrack file 
+
+git commit -m " [comment to understand what i do]"      =push to local rebo
+
+git branch    = say which branch i work at
+
+git push remotename branchname eg git bush origin main
+
+to know remote name     git remote -v
+
+
+
